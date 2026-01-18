@@ -62,9 +62,6 @@ N -440 -450 -440 -440 {
 lab=IO_vss}
 N -500 -450 -500 -440 {
 lab=IO_iovss}
-N 580 70 600 70 {lab=out_a}
-N 20 -260 240 -260 {lab=IO_vdd}
-N -210 -280 260 -280 {lab=IO_iovss}
 N -220 210 270 210 {lab=IO_iovdd}
 N 240 -60 300 -60 {lab=IO_vdd}
 N 250 -70 300 -70 {lab=IO_vss}
@@ -78,10 +75,6 @@ N 260 -30 300 -30 {lab=IO_iovss}
 N 260 -110 260 -30 {lab=IO_iovss}
 N 270 -40 300 -40 {lab=IO_iovdd}
 N 270 -90 270 -40 {lab=IO_iovdd}
-N 240 40 240 180 {lab=IO_vdd}
-N 250 50 250 190 {lab=IO_vss}
-N 260 90 260 200 {lab=IO_iovss}
-N 270 100 270 210 {lab=IO_iovdd}
 N -220 -120 -220 -40 {lab=IO_iovdd}
 N 580 -90 600 -90 {lab=IO_iovdd}
 N 270 -120 270 -90 {lab=IO_iovdd}
@@ -91,10 +84,6 @@ N 540 -120 540 -90 {lab=IO_iovdd}
 N 270 -90 540 -90 {lab=IO_iovdd}
 N 540 -50 540 -10 {lab=IO_iovss}
 N 260 -10 540 -10 {lab=IO_iovss}
-N -190 100 -190 180 {lab=IO_vdd}
-N -200 170 -200 190 {lab=IO_vss}
-N -210 130 -210 200 {lab=IO_iovss}
-N -220 120 -220 210 {lab=IO_iovdd}
 N -560 -40 -560 -10 {lab=IO_vss}
 N -560 -130 -560 -90 {lab=IO_vdd}
 N -260 -120 -220 -120 {lab=IO_iovdd}
@@ -116,16 +105,10 @@ N -600 -10 -560 -10 {lab=IO_vss}
 N -200 -70 -200 -10 {lab=IO_vss}
 N -600 -90 -560 -90 {lab=IO_vdd}
 N -510 -90 -190 -90 {lab=IO_vdd}
-N -260 40 -220 40 {lab=IO_iovdd}
-N -220 -40 -220 40 {lab=IO_iovdd}
-N -260 50 -210 50 {lab=IO_iovss}
-N -210 -30 -210 50 {lab=IO_iovss}
-N -260 90 -200 90 {lab=IO_vss}
-N -200 10 -200 90 {lab=IO_vss}
-N -260 100 -190 100 {lab=IO_vdd}
-N -190 20 -190 100 {lab=IO_vdd}
-N -560 70 -500 70 {lab=in_b}
-N -600 70 -560 70 {lab=in_b}
+N -220 120 -220 210 {lab=IO_iovdd}
+N -210 130 -210 200 {lab=IO_iovss}
+N -200 170 -200 190 {lab=IO_vss}
+N -190 100 -190 180 {lab=IO_vdd}
 N -190 180 240 180 {lab=IO_vdd}
 N -190 -140 -190 -90 {lab=IO_vdd}
 N -260 -150 -200 -150 {lab=IO_vss}
@@ -146,50 +129,19 @@ N -20 -430 -20 -420 {lab=GND}
 N -120 -430 -100 -430 {lab=sub!}
 N -120 -430 -120 -420 {lab=sub!}
 N 20 190 250 190 {lab=IO_vss}
-N -560 40 -560 70 {lab=in_b}
-N 630 -250 660 -250 {lab=out_a}
-N 780 -180 780 -140 {lab=out_a}
-N 820 -180 850 -180 {lab=out_a}
-N 850 -180 850 -140 {lab=out_a}
-N 820 -210 820 -180 {lab=out_a}
-N 780 -180 820 -180 {lab=out_a}
-N 270 100 300 100 {lab=IO_iovdd}
-N 270 -40 270 100 {lab=IO_iovdd}
-N 260 90 300 90 {lab=IO_iovss}
-N 260 -10 260 90 {lab=IO_iovss}
-N 250 50 300 50 {lab=IO_vss}
-N 250 10 250 50 {lab=IO_vss}
-N 240 40 300 40 {lab=IO_vdd}
-N 240 20 240 40 {lab=IO_vdd}
+N 270 -40 270 210 {lab=IO_iovdd}
+N 260 100 260 200 {lab=IO_iovss}
+N 250 50 250 190 {lab=IO_vss}
+N 240 40 240 180 {lab=IO_vdd}
 N -150 -50 -130 -50 {lab=vout}
 N -260 -170 -150 -170 {lab=vin}
-N -220 -290 270 -290 {lab=IO_iovdd}
 N -210 200 260 200 {lab=IO_iovss}
 N 170 -70 200 -70 {lab=vout}
-N -800 20 -800 40 {lab=GND}
-N -600 150 -560 150 {lab=in_c}
-N -560 120 -560 150 {lab=in_c}
-N -560 150 -500 150 {lab=in_c}
-N -560 150 -560 320 {lab=in_c}
-N 580 70 580 320 {lab=out_a}
-N 540 70 580 70 {lab=out_a}
-N 850 -180 930 -180 {lab=out_a}
-N 990 -180 1100 -180 {lab=in_b}
-N 1100 -200 1100 -180 {lab=in_b}
-N -560 320 -20 320 {lab=in_c}
-N 40 320 580 320 {lab=out_a}
+N -900 170 -900 190 {lab=GND}
 N -150 -190 -150 -170 {lab=vin}
-N -260 120 -220 120 {lab=IO_iovdd}
-N -220 40 -220 120 {lab=IO_iovdd}
-N -260 130 -210 130 {lab=IO_iovss}
-N -210 50 -210 130 {lab=IO_iovss}
-N -260 170 -200 170 {lab=IO_vss}
-N -200 90 -200 170 {lab=IO_vss}
-N -260 180 -190 180 {lab=IO_vdd}
 N -150 -170 -150 -90 {lab=vin}
 N -150 -90 -130 -90 {lab=vin}
-N -800 -70 -800 -40 {lab=#net1}
-N -800 -160 -800 -130 {lab=in_a}
+N -900 -80 -900 -50 {lab=in_a}
 N -510 -90 -510 -80 {lab=IO_vdd}
 N -560 -90 -510 -90 {lab=IO_vdd}
 N -510 -20 -510 -10 {lab=IO_vss}
@@ -198,36 +150,66 @@ N 580 -90 580 -80 {lab=IO_iovdd}
 N 540 -90 580 -90 {lab=IO_iovdd}
 N 580 -20 580 -10 {lab=IO_iovss}
 N 540 -10 580 -10 {lab=IO_iovss}
+N 20 -260 240 -260 {lab=IO_vdd}
+N -200 190 20 190 {lab=IO_vss}
+N 570 -200 570 -170 {lab=out_a}
+N 270 -140 270 -120 {lab=IO_iovdd}
+N 260 -150 260 -110 {lab=IO_iovss}
+N 250 -190 250 -70 {lab=IO_vss}
+N 240 -200 240 -60 {lab=IO_vdd}
+N -210 -280 260 -280 {lab=IO_iovss}
+N 200 -170 200 -70 {lab=vout}
+N 200 -180 200 -170 {lab=vout}
+N -220 -290 270 -290 {lab=IO_iovdd}
 N 20 -260 20 -130 {lab=IO_vdd}
 N -190 -260 20 -260 {lab=IO_vdd}
+N 240 -200 300 -200 {lab=IO_vdd}
+N 250 -190 300 -190 {lab=IO_vss}
+N 270 -140 300 -140 {lab=IO_iovdd}
+N 270 -290 270 -140 {lab=IO_iovdd}
+N 260 -150 300 -150 {lab=IO_iovss}
+N 260 -280 260 -150 {lab=IO_iovss}
+N 240 -260 240 -200 {lab=IO_vdd}
+N 250 -270 250 -190 {lab=IO_vss}
+N 200 -170 300 -170 {lab=vout}
+N -900 10 -900 110 {lab=#net1}
+N 540 -170 570 -170 {lab=out_a}
+N 570 -170 600 -170 {lab=out_a}
+N -560 70 -500 70 {lab=#net2}
+N -560 50 -560 70 {lab=#net2}
+N -600 70 -560 70 {lab=#net2}
+N -260 40 -220 40 {lab=IO_iovdd}
+N -220 -40 -220 40 {lab=IO_iovdd}
+N -260 50 -210 50 {lab=IO_iovss}
+N -210 -30 -210 50 {lab=IO_iovss}
+N -260 90 -200 90 {lab=IO_vss}
+N -200 10 -200 90 {lab=IO_vss}
+N -260 100 -190 100 {lab=IO_vdd}
+N -190 20 -190 100 {lab=IO_vdd}
+N -260 120 -220 120 {lab=IO_iovdd}
+N -220 40 -220 120 {lab=IO_iovdd}
+N -260 130 -210 130 {lab=IO_iovss}
+N -210 50 -210 130 {lab=IO_iovss}
+N -260 170 -200 170 {lab=IO_vss}
+N -200 90 -200 170 {lab=IO_vss}
+N -260 180 -190 180 {lab=IO_vdd}
+N 240 40 300 40 {lab=IO_vdd}
+N 240 20 240 40 {lab=IO_vdd}
+N 250 50 300 50 {lab=IO_vss}
+N 250 10 250 50 {lab=IO_vss}
+N 260 90 300 90 {lab=IO_iovss}
+N 260 -10 260 90 {lab=IO_iovss}
+N 260 100 300 100 {lab=IO_iovss}
+N 260 90 260 100 {lab=IO_iovss}
+N 200 -70 200 120 {lab=vout}
+N -60 60 -40 60 {lab=vcont}
+N -40 -10 -40 60 {lab=vcont}
+N -150 -50 -150 120 {lab=vout}
+N -150 120 200 120 {lab=vout}
 N 20 -10 20 190 {lab=IO_vss}
-N -200 190 20 190 {lab=IO_vss}
-N 240 -140 240 -60 {lab=IO_vdd}
-N 250 -150 250 -70 {lab=IO_vss}
-N 260 -190 260 -110 {lab=IO_iovss}
-N 270 -200 270 -120 {lab=IO_iovdd}
-N 630 -280 630 -250 {lab=out_a}
-N 600 -250 630 -250 {lab=out_a}
-N 200 -170 200 -70 {lab=vout}
-N 600 -250 600 -170 {lab=out_a}
-N -150 -50 -150 100 {lab=vout}
-N 200 -70 200 100 {lab=vout}
 N 90 -10 90 70 {lab=vcont}
 N -40 70 90 70 {lab=vcont}
-N -40 -10 -40 70 {lab=vcont}
-N 200 -170 300 -170 {lab=vout}
-N 200 -180 200 -170 {lab=vout}
-N 270 -200 300 -200 {lab=IO_iovdd}
-N 270 -290 270 -200 {lab=IO_iovdd}
-N 260 -190 300 -190 {lab=IO_iovss}
-N 260 -280 260 -190 {lab=IO_iovss}
-N 250 -150 300 -150 {lab=IO_vss}
-N 250 -270 250 -150 {lab=IO_vss}
-N 240 -140 300 -140 {lab=IO_vdd}
-N 240 -260 240 -140 {lab=IO_vdd}
-N 540 -170 600 -170 {lab=out_a}
-N -150 100 200 100 {lab=vout}
-N -260 70 -120 70 {lab=vpb}
+N -40 60 -40 70 {lab=vcont}
 C {vsource.sym} -360 -410 0 0 {name=V1 value=1.2}
 C {gnd.sym} -360 -380 0 0 {name=l3 lab=GND}
 C {lab_pin.sym} -360 -450 1 0 {name=p7 sig_type=std_logic lab=IO_vdd}
@@ -241,7 +223,7 @@ C {lab_pin.sym} -440 -450 1 0 {name=p9 sig_type=std_logic lab=IO_vss}
 C {vsource.sym} -500 -410 0 0 {name=V4 value=0 savecurrent=false}
 C {gnd.sym} -500 -380 0 0 {name=l6 lab=GND}
 C {lab_pin.sym} -500 -450 1 0 {name=p10 sig_type=std_logic lab=IO_iovss}
-C {devices/code_shown.sym} -1530 -480 0 0 {name=MODEL only_toplevel=true
+C {devices/code_shown.sym} -1540 -490 0 0 {name=MODEL only_toplevel=true
 format="tcleval( @value )"
 value="
 .lib cornerMOSlv.lib mos_tt
@@ -317,23 +299,9 @@ size=80u
 shape=0
 padtype=0
 }
-C {sg13g2_pr/bondpad.sym} 640 70 1 0 {name=X10
-model=bondpad
-spiceprefix=X
-size=80u
-shape=0
-padtype=0
-}
 C {devices/launcher.sym} -840 970 0 0 {name=h5
 descr="load waves Ctrl + left click" 
 tclcommand="xschem raw_read $netlist_dir/power_io.raw tran"
-}
-C {sg13g2_pr/bondpad.sym} -640 70 3 1 {name=X12
-model=bondpad
-spiceprefix=X
-size=80u
-shape=0
-padtype=0
 }
 C {sg13g2_IOPadAnalog.sym} -380 -170 0 1 {name=x13}
 C {sg13g2_pr/bondpad.sym} -640 -170 3 1 {name=X14
@@ -343,88 +311,110 @@ size=80u
 shape=0
 padtype=0
 }
-C {gnd.sym} -800 40 0 0 {name=l7 lab=GND}
-C {lab_pin.sym} -800 -160 1 0 {name=p11 sig_type=std_logic lab=in_a}
+C {gnd.sym} -900 190 0 0 {name=l7 lab=GND}
+C {lab_pin.sym} -900 -80 1 0 {name=p11 sig_type=std_logic lab=in_a}
 C {lab_pin.sym} -560 -190 1 0 {name=p1 sig_type=std_logic lab=in_a}
 C {sg13g2_pr/sub.sym} -120 -420 0 0 {name=l8 lab=sub!}
 C {gnd.sym} -20 -420 0 0 {name=l11 lab=GND}
 C {vsource.sym} -70 -430 1 0 {name=V5 value=0 savecurrent=false}
-C {sg13g2_pr/bondpad.sym} 700 -250 1 0 {name=X16
+C {sg13g2_pr/bondpad.sym} 640 -170 1 0 {name=X16
 model=bondpad
 spiceprefix=X
 size=80u
 shape=0
 padtype=0
 }
-C {capa.sym} 780 -110 0 0 {name=C5
-m=1
-value=100f
-footprint=1206
-device="ceramic capacitor"
-spice_ignore=true}
-C {res.sym} 850 -110 0 0 {name=R2
-value=50k
-footprint=1206
-device=resistor
-m=1
-spice_ignore=true}
-C {gnd.sym} 780 -80 0 0 {name=l13 lab=GND}
-C {gnd.sym} 850 -80 0 0 {name=l14 lab=GND}
 C {/foss/designs/DLL/2026/Cells/TOP.sym} 20 -70 0 0 {name=x17
 }
-C {sg13g2_IOPadAnalog.sym} -380 70 0 1 {name=x11
+C {lab_pin.sym} 570 -200 1 0 {name=p13 sig_type=std_logic lab=out_a}
+C {vsource.sym} -900 140 0 0 {name=Vin value="PULSE(0 1.2 0 40p 40p 2n 4n)"
 }
-C {lab_pin.sym} -560 40 1 0 {name=p2 sig_type=std_logic lab=in_b}
-C {sg13g2_IOPadAnalog.sym} -380 150 0 1 {name=x18
-spice_ignore=true}
-C {sg13g2_pr/bondpad.sym} -640 150 3 1 {name=X19
-model=bondpad
-spiceprefix=X
-size=80u
-shape=0
-padtype=0
-}
-C {lab_pin.sym} -560 120 1 0 {name=p12 sig_type=std_logic lab=in_c}
-C {lab_pin.sym} 630 -280 1 0 {name=p13 sig_type=std_logic lab=out_a}
-C {res.sym} 960 -180 3 0 {name=R1
-value=10
-footprint=1206
-device=resistor
-m=1
-}
-C {lab_pin.sym} 1100 -200 1 0 {name=p14 sig_type=std_logic lab=in_b}
-C {vsource.sym} -800 -10 0 0 {name=Vin value="PULSE(0 1.2 0 20p 20p 1n 2n)"}
-C {res.sym} 10 320 3 0 {name=R3
-value=10
-footprint=1206
-device=resistor
-m=1}
-C {lab_pin.sym} 560 70 1 0 {name=p15 sig_type=std_logic lab=out_a}
 C {lab_pin.sym} -150 -190 1 0 {name=p16 sig_type=std_logic lab=vin}
 C {lab_pin.sym} 200 -180 1 0 {name=p17 sig_type=std_logic lab=vout}
-C {lab_pin.sym} -40 20 0 0 {name=p19 sig_type=std_logic lab=vcont}
-C {res.sym} -800 -100 2 0 {name=R4
+C {lab_pin.sym} -60 60 1 0 {name=p19 sig_type=std_logic lab=vcont}
+C {res.sym} -900 -20 2 0 {name=R4
 value=10
 footprint=1206
 device=resistor
 m=1}
-C {lab_pin.sym} 820 -210 1 0 {name=p21 sig_type=std_logic lab=out_a}
 C {code.sym} -1050 -20 0 0 {name=TRANSIENT1 only_toplevel=true
 value="
 .options method=gear reltol=1e-1 abstol=1e-1 vntol=1e-1
 .control
- tran 2p 20n
+ tran 10p 20n 10p
  plot v(vin) v(vout)
  plot v(in_a) v(out_a)
  plot v(vout) v(out_a)
  plot v(vcont) 
- plot v(vout) v(vpb)
  *plot i(V1) 
 .endc
 "
-}
-C {sg13g2_IOPadAnalog.sym} 420 70 2 1 {name=x15
 spice_ignore=true}
 C {sg13g2_IOPadAnalog.sym} 420 -170 2 1 {name=x5
 }
-C {lab_pin.sym} -120 70 2 0 {name=p18 sig_type=std_logic lab=vpb}
+C {sg13g2_IOPadAnalog.sym} -380 70 0 1 {name=x10
+}
+C {sg13g2_pr/bondpad.sym} -640 70 3 1 {name=X11
+model=bondpad
+spiceprefix=X
+size=80u
+shape=0
+padtype=0
+}
+C {code.sym} -840 -250 0 0 {name=PHASE_MEASR only_toplevel=true
+value="
+.options method=gear reltol=1e-1 abstol=1e-1 vntol=1e-1
+.control
+ tran 20p 50n 20p
+* ---- settings you tweak ----
+
+
+   * ---- user settings ----
+  let vlow  = 0
+  let vhigh = 1.2
+  let v50   = vlow + 0.5*(vhigh - vlow)
+
+  let start_edge = 0     ; skip early edges (settling)
+  let N = 600             ; number of phase samples
+
+
+
+
+  * ---- allocate vectors ----
+  let tvec   = vector(N)
+  let phivec = vector(N)
+
+  let k = 0
+  let i = start_edge
+
+  while k < N
+    * crossing times
+    meas tran tin      WHEN v(in_a)=v50  RISE=i
+    meas tran tout     WHEN v(out_a)=v50 RISE=i
+    meas tran tin_next WHEN v(in_a)=v50  RISE=(i+1)
+
+    * delay + period
+    let dt = tout - tin
+    let T  = tin_next - tin
+
+    * phase in degrees (per-cycle)
+    let phi = 360*dt/T
+    let phi = phi - 360*floor(phi/360)
+
+    * store sample at time = tin
+    let tvec[k]   = tin
+    let phivec[k] = phi
+
+    let k = k + 1
+    let i = i + 1
+  end
+
+  * plot phase vs time (one point per cycle)
+  plot phivec vs tvec
+  *plot v(vcont) 
+  plot v(vin) v(vout) 
+  plot v(in_a) v(out_a) 
+  plot v(vcont)
+.endc
+"
+}

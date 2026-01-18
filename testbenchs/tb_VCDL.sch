@@ -7,16 +7,22 @@ F {}
 E {}
 N 150 60 150 80 {lab=VSS}
 N 100 0 200 0 {lab=VOUT}
-N -370 260 -370 290 {lab=VSS}
+N -370 280 -370 290 {lab=VSS}
 N -600 100 -600 120 {lab=GND}
 N -500 100 -500 120 {lab=GND}
 N -40 70 -40 120 {lab=VCONT}
 N -600 260 -600 290 {lab=VSS}
 N -600 180 -600 200 {lab=VIN}
 N -170 0 -110 0 {lab=VIN}
-N -370 170 -370 200 {lab=VCONT}
+N -370 180 -370 200 {lab=VCONT}
 N 40 70 40 120 {lab=VSS}
 N 0 -110 0 -60 {lab=VDD}
+N -290 260 -290 280 {lab=VSS}
+N -370 280 -290 280 {lab=VSS}
+N -370 260 -370 280 {lab=VSS}
+N -370 180 -290 180 {lab=VCONT}
+N -370 170 -370 180 {lab=VCONT}
+N -290 180 -290 200 {lab=VCONT}
 C {vsource.sym} -600 230 0 0 {name=Vin value="PULSE(0 1.2 0 10p 10p 0.99n 2n)"}
 C {devices/lab_pin.sym} 200 0 0 1 {name=p2 sig_type=std_logic lab=VOUT}
 C {code_shown.sym} -680 -240 0 0 {name=MODEL1 only_toplevel=true
@@ -45,8 +51,9 @@ m=1
 value=100f
 footprint=1206
 device="ceramic capacitor"}
-C {devices/vsource.sym} -370 230 0 0 {name=Vcont1 value="PWL(100n 0 200n 1.2)"}
-C {/foss/designs/DLL/2026/Cells/VCDL.sym} 0 0 0 0 {name=x1}
+C {devices/vsource.sym} -370 230 0 0 {name=Vcont1 value="PWL(100n 0 200n 1.2)"
+spice_ignore=true}
+C {/foss/designs/DLL/2026/Cells/VCDL.sym} 0 0 0 0 {name=x1[1:0]}
 C {vsource.sym} -600 70 0 0 {name=V3 value=1.2 savecurrent=false}
 C {gnd.sym} -600 120 0 0 {name=l6 lab=GND}
 C {lab_pin.sym} -600 40 2 0 {name=p3 sig_type=std_logic lab=VDD}
@@ -111,11 +118,11 @@ value="
 
   * plot phase vs time (one point per cycle)
   plot phivec vs tvec
-  plot v(VCONT) 
+  *plot v(VCONT) 
   plot v(VIN) v(VOUT) 
 .endc
 "
-spice_ignore=true}
+}
 C {code.sym} -370 -260 0 0 {name=TRANSIENT only_toplevel=true
 value="
 .control
@@ -182,4 +189,6 @@ value="
   plot phivec vs vcontvec
 .endc
 "
+spice_ignore=true}
+C {vsource.sym} -290 230 0 0 {name=V1 value=1.2 savecurrent=false
 }
