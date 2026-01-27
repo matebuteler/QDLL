@@ -1,0 +1,16 @@
+* Extracted by KLayout with SG13G2 LVS runset on : 24/01/2026 04:34
+
+.SUBCKT VCDL VSS VDD VCONT VIN VOUT
+M$1 VDD \$5 \$8 VDD sg13_lv_pmos L=0.13u W=2.24u AS=0.7616p AD=0.7616p PS=5.16u
++ PD=5.16u
+M$2 VSS VCONT \$7 VSS sg13_lv_nmos L=0.16u W=3.5u AS=1.19p AD=1.19p PS=7.68u
++ PD=7.68u
+M$3 \$5 VCONT VSS VSS sg13_lv_nmos L=0.25u W=2u AS=0.68p AD=0.68p PS=4.68u
++ PD=4.68u
+M$4 \$8 VIN VOUT VDD sg13_lv_pmos L=0.13u W=4.46u AS=1.5164p AD=1.5164p PS=9.6u
++ PD=9.6u
+M$5 \$5 \$5 VDD VDD sg13_lv_pmos L=0.16u W=2.8u AS=0.952p AD=0.952p PS=6.28u
++ PD=6.28u
+M$6 \$7 VIN VOUT VSS sg13_lv_nmos L=0.13u W=2u AS=0.68p AD=0.68p PS=4.68u
++ PD=4.68u
+.ENDS VCDL

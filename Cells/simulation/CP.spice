@@ -1,0 +1,19 @@
+** sch_path: /foss/designs/DLL/2026/Cells/CP.sch
+.subckt CP CPIN CPOUT VSS
+*.PININFO VSS:B CPIN:I CPOUT:O
+C1 CPOUT VSS cap_cmim w=20e-6 l=20e-6 m=1
+x1 net1 CPIN RES
+x2 CPOUT net1 RES
+.ends
+
+* expanding   symbol:  /foss/designs/DLL/2026/Cells/RES.sym # of pins=2
+** sym_path: /foss/designs/DLL/2026/Cells/RES.sym
+** sch_path: /foss/designs/DLL/2026/Cells/RES.sch
+.subckt RES ROUT RIN
+*.PININFO RIN:I ROUT:O
+R1 net1 RIN rppd w=1e-6 l=10e-6 m=1 b=0
+R3 net2 net1 rppd w=1e-6 l=10e-6 m=1 b=0
+R4 net3 net2 rppd w=1e-6 l=10e-6 m=1 b=0
+R5 ROUT net3 rppd w=1e-6 l=10e-6 m=1 b=0
+.ends
+

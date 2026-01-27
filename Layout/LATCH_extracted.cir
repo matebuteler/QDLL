@@ -1,0 +1,12 @@
+* Extracted by KLayout with SG13G2 LVS runset on : 24/01/2026 05:54
+
+.SUBCKT LATCH VSS A|V2|Y A|V1|Y VDD
+M$1 VSS A|V1|Y A|V2|Y VSS sg13_lv_nmos L=0.13u W=0.74u AS=0.2516p AD=0.2516p
++ PS=2.16u PD=2.16u
+M$2 VSS A|V2|Y A|V1|Y VSS sg13_lv_nmos L=0.13u W=0.74u AS=0.2516p AD=0.2516p
++ PS=2.16u PD=2.16u
+M$3 VDD A|V1|Y A|V2|Y VDD sg13_lv_pmos L=0.13u W=1.12u AS=0.3808p AD=0.3808p
++ PS=2.92u PD=2.92u
+M$4 VDD A|V2|Y A|V1|Y VDD sg13_lv_pmos L=0.13u W=1.12u AS=0.3808p AD=0.3808p
++ PS=2.92u PD=2.92u
+.ENDS LATCH

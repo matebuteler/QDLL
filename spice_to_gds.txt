@@ -1,5 +1,34 @@
+
+###  |
+
+
 klayout -n sg13g2 -zz -r hierarchical.py \
-  -rd netlist=/foss/designs/DLL/2026/example/simulation/TG_2C.spice \
-  -rd output=/foss/designs/DLL/2026/Layout/TG_2C1.gds \
+  -rd netlist=/foss/designs/DLL/2026/Cells/simulation/VCDL.spice \
+  -rd output=/foss/designs/DLL/2026/Layout/VCDL_v2.gds \
+  -rd leaf=1 \
+  -rd gallery=0
+
+  klayout -n sg13g2 -zz -r hierarchical.py \
+  -rd netlist=/foss/designs/DLL/2026/Cells/simulation/LATCH.spice \
+  -rd output=/foss/designs/DLL/2026/Layout/LATCH.gds \
+  -rd leaf=1 \
+  -rd gallery=0
+
+
+
+  DLYGATES2
+
+    klayout -n sg13g2 -zz -r hierarchical.py \
+  -rd netlist=/foss/designs/DLL/2026/Cells/simulation/DLYGATES2.spice \
+  -rd output=/foss/designs/DLL/2026/Layout/DLYGATES2.gds \
+  -rd leaf=1 \
+  -rd gallery=0
+
+
+
+
+    klayout -n sg13g2 -zz -r hierarchical.py \
+  -rd netlist=/foss/designs/DLL/2026/Cells/simulation/INV4.spice \
+  -rd output=/foss/designs/DLL/2026/Layout/INV4.gds \
   -rd leaf=1 \
   -rd gallery=0

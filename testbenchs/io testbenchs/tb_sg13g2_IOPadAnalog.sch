@@ -51,7 +51,7 @@ N -230 290 -230 320 {lab=#net2}
 N -230 290 -180 290 {lab=#net2}
 C {gnd.sym} -210 50 0 0 {name=l7 lab=GND
 }
-C {vsource.sym} -210 0 0 0 {name=Vin value="PULSE(0 1.2 0 40p 40p 2n 4n)"
+C {vsource.sym} -210 0 0 0 {name=Vin value="PULSE(0 1.2 0 200p 200p 5n 10n)"
 }
 C {sg13g2_pr/bondpad.sym} 400 -120 1 0 {name=X16
 model=bondpad
@@ -136,7 +136,7 @@ device=resistor
 m=1
 spice_ignore=short}
 C {gnd.sym} 340 460 0 0 {name=l1 lab=GND}
-C {vsource.sym} 340 410 0 0 {name=Vin1 value="PULSE(0 1.2 0 40p 40p 1n 2n)"
+C {vsource.sym} 340 410 0 0 {name=Vin1 value="PULSE(0 1.2 0 40p 40p 0.5n 1n)"
 }
 C {sg13g2_pr/bondpad.sym} 410 290 1 0 {name=X1
 model=bondpad
@@ -168,3 +168,5 @@ footprint=1206
 device="ceramic capacitor"
 }
 C {gnd.sym} -230 380 0 0 {name=l2 lab=GND}
+C {sg13g2_IOPadIn.sym} 70 480 0 0 {name=x3
+spice_ignore=true}

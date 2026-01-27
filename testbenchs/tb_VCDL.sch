@@ -53,7 +53,7 @@ footprint=1206
 device="ceramic capacitor"}
 C {devices/vsource.sym} -370 230 0 0 {name=Vcont1 value="PWL(100n 0 200n 1.2)"
 spice_ignore=true}
-C {/foss/designs/DLL/2026/Cells/VCDL.sym} 0 0 0 0 {name=x1[1:0]}
+C {/foss/designs/DLL/2026/Cells/VCDL.sym} 0 0 0 0 {name=x1}
 C {vsource.sym} -600 70 0 0 {name=V3 value=1.2 savecurrent=false}
 C {gnd.sym} -600 120 0 0 {name=l6 lab=GND}
 C {lab_pin.sym} -600 40 2 0 {name=p3 sig_type=std_logic lab=VDD}
@@ -190,5 +190,5 @@ value="
 .endc
 "
 spice_ignore=true}
-C {vsource.sym} -290 230 0 0 {name=V1 value=1.2 savecurrent=false
+C {vsource.sym} -290 230 0 0 {name=V1 value=0.49 savecurrent=false
 }
