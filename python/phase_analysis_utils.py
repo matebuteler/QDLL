@@ -733,3 +733,103 @@ def plot_phi_crudo_y_delta(vin1, t1, vout2, t2, threshold=0.6, freq=None, edge="
     print("N pares Δφ  =", len(dphi),   "último t_axis [ns] =", t_axis[-1]*1e9)
 
     return (c_in, phi_in), (c_out, phi_out), (t_axis, dphi), freq
+
+
+def plot_phase_difference_full(vin1, t1, vout2, t2, threshold=0.6, freq=None, edge="rise"):
+    """
+    Plot phase difference between vin1 and vout2 across entire simulation time.
+    Uses all crossings without strict time-matching constraint.
+    """
+    def crossings_one_edge(sig, t, thr=0.6, edge="rise"):
+        sig = np.asarray(sig); t = np.asarray(t)
+        if sig.shape[0] != t.shape[0]:
+            raise ValueError(f"sig y t deben tener mismo largo: {len(sig)} vs {len(t)}")
+
+        if edge == "rise":
+            idx = np.where((sig[:-1] < thr) & (sig[1:] >= thr))[0]
+        elif edge == "fall":
+            idx = np.where((sig[:-1] > thr) & (sig[1:] <= thr))[0]
+        else:
+            raise ValueError("edge debe ser 'rise' o 'fall'")
+
+        if idx.size == 0:
+            return np.array([])
+
+        y0, y1 = sig[idx], sig[idx+1]
+        t0, t1_ = t[idx], t[idx+1]
+        denom = (y1 - y0)
+        good = np.abs(denom) > 0
+        y0, t0, t1_, denom = y0[good], t0[good], t1_[good], denom[good]
+        return t0 + (thr - y0) * (t1_ - t0) / denom
+
+    def estimate_freq_from_rises(sig, t, thr=0.6):
+        tr = crossings_one_edge(sig, t, thr=thr, edge="rise")
+        if len(tr) < 2:
+            return float("nan")
+        T = np.median(np.diff(tr))
+        return 1.0 / T
+
+    # Get crossings
+    c_in  = crossings_one_edge(vin1,  t1, thr=threshold, edge=edge)
+    c_out = crossings_one_edge(vout2, t2, thr=threshold, edge=edge)
+    
+    if len(c_in) == 0 or len(c_out) == 0:
+        raise ValueError("No hay cruces suficientes. Revisá threshold/edge o señales.")
+
+    # Estimate frequency if not provided
+    if freq is None:
+        freq = estimate_freq_from_rises(vin1, t1, thr=threshold)
+    if not np.isfinite(freq) or freq <= 0:
+        raise ValueError("freq inválida. Pasala manualmente o revisá estimate_freq.")
+
+    # Calculate raw phases
+    phi_in  = 360.0 * freq * c_in
+    phi_out = 360.0 * freq * c_out
+
+    # Match all output crossings with nearest input crossing
+    min_len = min(len(c_in), len(c_out))
+    
+    # Use the shorter array as reference and match all
+    if len(c_out) <= len(c_in):
+        # For each output crossing, find nearest input crossing
+        dphi_list = []
+        t_axis_list = []
+        for i, t_out in enumerate(c_out):
+            # Find nearest input crossing
+            idx_in = np.argmin(np.abs(c_in - t_out))
+            dphi_list.append(phi_out[i] - phi_in[idx_in])
+            t_axis_list.append(t_out)
+    else:
+        # For each input crossing, find nearest output crossing
+        dphi_list = []
+        t_axis_list = []
+        for i, t_in in enumerate(c_in):
+            # Find nearest output crossing
+            idx_out = np.argmin(np.abs(c_out - t_in))
+            dphi_list.append(phi_out[idx_out] - phi_in[i])
+            t_axis_list.append(t_in)
+    
+    dphi = np.array(dphi_list)
+    t_axis = np.array(t_axis_list)
+
+    # Plot the full phase difference
+    fig, ax = plt.subplots(figsize=(12, 6))
+    ax.plot(t_axis * 1e9, dphi, marker='o', linestyle='-', linewidth=1, markersize=4)
+    ax.set_xlabel("Tiempo (ns)", fontsize=12)
+    ax.set_ylabel("Δφ = φ(vout2) − φ(vin1) (°)", fontsize=12)
+    ax.set_title(f"Diferencia de Fase (Full Range), thr={threshold}, f={freq/1e6:.2f} MHz, edge={edge}", fontsize=13)
+    ax.grid(True, alpha=0.3)
+    fig.tight_layout()
+    plt.show()
+
+    # Print debug info
+    print(f"\n=== PHASE DIFFERENCE ANALYSIS ===")
+    print(f"Simulation end time: {np.asarray(t1)[-1]*1e9:.2f} ns | {np.asarray(t2)[-1]*1e9:.2f} ns")
+    print(f"Input crossings (vin1): {len(c_in)}, last at {c_in[-1]*1e9:.2f} ns")
+    print(f"Output crossings (vout2): {len(c_out)}, last at {c_out[-1]*1e9:.2f} ns")
+    print(f"Phase difference pairs: {len(dphi)}, last time: {t_axis[-1]*1e9:.2f} ns")
+    print(f"Frequency: {freq/1e6:.2f} MHz")
+    print(f"Mean phase difference: {np.mean(dphi):.2f}°")
+    print(f"Std dev phase difference: {np.std(dphi):.2f}°")
+    
+    return (c_in, phi_in), (c_out, phi_out), (t_axis, dphi), freq
