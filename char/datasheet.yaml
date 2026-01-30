@@ -23,16 +23,12 @@ pins:
     type: power
     Vmin: 1.7
     Vmax: 1.9
-    Imin: 0
-    Imax: 0.01
   VSS:
     description: Ground supply
     direction: inout
     type: ground
     Vmin: 0
     Vmax: 0
-    Imin: 0
-    Imax: 0.01
 
 default_conditions:
   Vvdd:
@@ -62,6 +58,7 @@ parameters:
     unit: mA
     tool: ngspice
     method: current
+    template: testbenches/tb_QDLL_TOP.sch
     spec:
       typical:
         value: any
@@ -79,6 +76,7 @@ parameters:
     unit: MHz
     tool: ngspice
     method: frequency
+    template: testbenches/tb_QDLL_TOP.sch
     spec:
       minimum:
         value: 50
@@ -100,6 +98,7 @@ parameters:
     unit: dBc/Hz
     tool: ngspice
     method: noise
+    template: testbenches/tb_QDLL_TOP.sch
     spec:
       maximum:
         value: -100
@@ -117,6 +116,7 @@ parameters:
     unit: ps
     tool: ngspice
     method: jitter
+    template: testbenches/tb_QDLL_TOP.sch
     spec:
       maximum:
         value: 10
