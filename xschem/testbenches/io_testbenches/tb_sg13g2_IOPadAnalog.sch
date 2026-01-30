@@ -62,7 +62,7 @@ padtype=0
 }
 C {lab_pin.sym} 330 -150 1 0 {name=p13 sig_type=std_logic lab=out_a
 }
-C {sg13g2_IOPadAnalog.sym} 180 -120 2 1 {name=x5
+C {sg13g2_pr/sg13g2_IOPadAnalog.sym} 180 -120 2 1 {name=x5
 }
 C {vsource.sym} -260 -330 0 0 {name=V1 value=1.2}
 C {gnd.sym} -260 -300 0 0 {name=l3 lab=GND}
@@ -147,7 +147,7 @@ padtype=0
 }
 C {lab_pin.sym} -90 280 1 0 {name=p6 sig_type=std_logic lab=out_a
 spice_ignore=true}
-C {sg13g2_IOPadAnalog.sym} 190 290 2 1 {name=x2
+C {sg13g2_pr/sg13g2_IOPadAnalog.sym} 190 290 2 1 {name=x2
 }
 C {lab_pin.sym} 30 320 0 0 {name=p11 sig_type=std_logic lab=IO_iovdd}
 C {lab_pin.sym} 30 260 0 0 {name=p12 sig_type=std_logic lab=IO_vdd}
@@ -168,5 +168,5 @@ footprint=1206
 device="ceramic capacitor"
 }
 C {gnd.sym} -230 380 0 0 {name=l2 lab=GND}
-C {sg13g2_IOPadIn.sym} 70 480 0 0 {name=x3
+C {sg13g2_pr/sg13g2_IOPadIn.sym} 70 480 0 0 {name=x3
 spice_ignore=true}

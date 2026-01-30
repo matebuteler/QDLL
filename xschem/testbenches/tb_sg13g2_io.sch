@@ -172,7 +172,7 @@ m=1
 value=100f
 footprint=1206
 device="ceramic capacitor"}
-C {sg13g2_IOPadOut16mA.sym} 1340 -730 2 1 {name=x3
+C {sg13g2_pr/sg13g2_IOPadOut16mA.sym} 1340 -730 2 1 {name=x3
 spice_ignore=true}
 C {devices/capa.sym} 1560 -370 0 0 {name=C3
 m=1
@@ -181,12 +181,12 @@ footprint=1206
 device="ceramic capacitor"}
 C {devices/lab_wire.sym} 1520 -510 0 0 {name=p6 sig_type=std_logic lab=vout}
 C {devices/vsource.sym} 580 -270 0 0 {name=V4 value=\{iovdd\} savecurrent=false}
-C {sg13g2_IOPadIOVss.sym} 380 -770 2 0 {name=x4}
-C {sg13g2_IOPadIOVdd.sym} 380 -910 2 0 {name=x5}
-C {sg13g2_IOPadVss.sym} 380 -1050 2 0 {name=x6}
-C {sg13g2_IOPadVdd.sym} 380 -1180 2 0 {name=x7}
+C {sg13g2_pr/sg13g2_IOPadIOVss.sym} 380 -770 2 0 {name=x4}
+C {sg13g2_pr/sg13g2_IOPadIOVdd.sym} 380 -910 2 0 {name=x5}
+C {sg13g2_pr/sg13g2_IOPadVss.sym} 380 -1050 2 0 {name=x6}
+C {sg13g2_pr/sg13g2_IOPadVdd.sym} 380 -1180 2 0 {name=x7}
 C {devices/lab_wire.sym} 580 -350 0 0 {name=p3 sig_type=std_logic lab=iovdd}
-C {sg13g2_IOPadOut4mA.sym} 1340 -510 2 1 {name=x11
+C {sg13g2_pr/sg13g2_IOPadOut4mA.sym} 1340 -510 2 1 {name=x11
 }
 C {devices/code_shown.sym} -160 -1150 0 0 {name=MODEL only_toplevel=true
 format="tcleval( @value )"
@@ -247,6 +247,6 @@ shape=0
 padtype=0
 }
 C {devices/lab_wire.sym} 50 -650 0 0 {name=p7 sig_type=std_logic lab=vin2}
-C {sg13g2_IOPadOut30mA.sym} 370 -510 2 0 {name=x18}
-C {sg13g2_IOPadAnalog.sym} 380 -640 2 0 {name=x16}
+C {sg13g2_pr/sg13g2_IOPadOut30mA.sym} 370 -510 2 0 {name=x18}
+C {sg13g2_pr/sg13g2_IOPadAnalog.sym} 380 -640 2 0 {name=x16}
 C {vsource.sym} -30 -600 0 0 {name=Vin value="PULSE(0 1.2 0 10p 10p 0.99n 2n)"}

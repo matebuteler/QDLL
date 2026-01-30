@@ -233,10 +233,10 @@ C {lab_pin.sym} 510 -80 2 0 {name=p3 sig_type=std_logic lab=IO_iovdd}
 C {lab_pin.sym} 510 -10 2 0 {name=p4 sig_type=std_logic lab=IO_iovss}
 C {lab_pin.sym} -590 -90 0 1 {name=p5 sig_type=std_logic lab=IO_vdd}
 C {lab_pin.sym} -590 0 2 0 {name=p6 sig_type=std_logic lab=IO_vss}
-C {sg13g2_IOPadIOVdd.sym} 390 -50 0 0 {name=x1}
-C {sg13g2_IOPadIOVss.sym} 390 30 0 0 {name=x3}
-C {sg13g2_IOPadVSS.sym} -410 30 0 1 {name=x2}
-C {sg13g2_IOPadVdd.sym} -410 -50 0 1 {name=x4}
+C {sg13g2_pr/sg13g2_IOPadIOVdd.sym} 390 -50 0 0 {name=x1}
+C {sg13g2_pr/sg13g2_IOPadIOVss.sym} 390 30 0 0 {name=x3}
+C {sg13g2_pr/sg13g2_IOPadVSS.sym} -410 30 0 1 {name=x2}
+C {sg13g2_pr/sg13g2_IOPadVdd.sym} -410 -50 0 1 {name=x4}
 C {sg13g2_pr/bondpad.sym} 610 30 1 0 {name=X6
 model=bondpad
 spiceprefix=X
@@ -269,7 +269,7 @@ C {devices/launcher.sym} 800 -500 0 0 {name=h5
 descr="load waves Ctrl + left click" 
 tclcommand="xschem raw_read $netlist_dir/transient.raw tran"
 }
-C {sg13g2_IOPadAnalog.sym} -410 -130 0 1 {name=x13}
+C {sg13g2_pr/sg13g2_IOPadAnalog.sym} -410 -130 0 1 {name=x13}
 C {sg13g2_pr/bondpad.sym} -670 -130 3 1 {name=X14
 model=bondpad
 spiceprefix=X
@@ -317,9 +317,9 @@ value="
 .endc
 "
 }
-C {sg13g2_IOPadAnalog.sym} 390 -130 2 1 {name=x5
+C {sg13g2_pr/sg13g2_IOPadAnalog.sym} 390 -130 2 1 {name=x5
 }
-C {sg13g2_IOPadAnalog.sym} -410 110 0 1 {name=x10
+C {sg13g2_pr/sg13g2_IOPadAnalog.sym} -410 110 0 1 {name=x10
 }
 C {sg13g2_pr/bondpad.sym} -670 110 3 1 {name=X11
 model=bondpad
@@ -351,7 +351,7 @@ shape=0
 padtype=0
 }
 C {lab_pin.sym} 540 190 2 0 {name=p15 sig_type=std_logic lab=outpad2}
-C {sg13g2_IOPadAnalog.sym} 390 110 2 1 {name=x18
+C {sg13g2_pr/sg13g2_IOPadAnalog.sym} 390 110 2 1 {name=x18
 }
 C {lab_pin.sym} -590 170 2 0 {name=p18 sig_type=std_logic lab=inpad2}
 C {Cells/QDLL_TOP.sym} -10 0 0 0 {name=x12}
