@@ -17,7 +17,7 @@ source $PDK_ROOT/$PDK/libs.tech/xschem/xschemrc
 #### Add project-specific xschem directories
 append XSCHEM_LIBRARY_PATH :$SCRIPT_DIR/xschem
 
-#### Add IO library path explicitly  
+#### Add IO library path explicitly
 append XSCHEM_LIBRARY_PATH :$PDK_ROOT/$PDK/libs.ref/sg13g2_io/xschem
 
 #### Add other library paths from PDK

@@ -1,5 +1,5 @@
 name: QDLL
-description: 100Mhz Quadrature Delay Locked Loop
+description: 100MHz Quadrature Delay Locked Loop
 PDK: ihp-sg13g2
 cace_format: 5.2
 
@@ -48,7 +48,7 @@ default_conditions:
   temperature:
     description: Ambient temperature
     display: Temp
-    unit: °C
+    unit: degC
     typical: 27
   corner:
     description: Process corner
