@@ -11,6 +11,13 @@ set SCRIPT_DIR [file dirname [file normalize [info script]]]
 set PDK_ROOT $SCRIPT_DIR/IHP-Open-PDK
 set PDK ihp-sg13g2
 
+#### Check if submodule is initialized
+if {![file exists $PDK_ROOT/$PDK/libs.tech/xschem/xschemrc]} {
+    puts "ERROR: IHP-Open-PDK submodule not initialized."
+    puts "Please run: git submodule update --init"
+    exit 1
+}
+
 #### Source the base PDK xschemrc configuration
 source $PDK_ROOT/$PDK/libs.tech/xschem/xschemrc
 

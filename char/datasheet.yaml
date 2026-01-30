@@ -70,7 +70,7 @@ parameters:
         typical: 27
       corner:
         typical: tt
-    
+
   input_frequency:
     description: Input frequency
     display: Fin
@@ -89,7 +89,7 @@ parameters:
         typical: 27
       corner:
         typical: tt
-        
+
   phase_noise:
     description: Phase noise
     display: PN
@@ -104,7 +104,7 @@ parameters:
         typical: 27
       corner:
         typical: tt
-        
+
   jitter:
     description: RMS jitter
     display: Jitter
