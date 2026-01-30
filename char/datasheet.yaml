@@ -11,7 +11,7 @@ authorship:
 
 paths:
   root: ..
-  schematic: tops
+  schematic: xschem
   layout: gds
   netlist: netlist
   documentation: doc
