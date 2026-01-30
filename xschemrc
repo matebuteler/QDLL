@@ -1,0 +1,39 @@
+#### xschemrc configuration file for DelayLine project
+#### This file configures xschem to use the IHP-Open-PDK submodule
+
+###########################################################################
+#### XSCHEM LIBRARY PATH CONFIGURATION
+###########################################################################
+#### Get the project root directory
+set SCRIPT_DIR [file dirname [file normalize [info script]]]
+
+#### Set PDK paths
+set PDK_ROOT $SCRIPT_DIR/IHP-Open-PDK
+set PDK ihp-sg13g2
+
+#### Check if submodule is initialized
+if {![file exists $PDK_ROOT/$PDK/libs.tech/xschem/xschemrc]} {
+    puts "ERROR: IHP-Open-PDK submodule not initialized."
+    puts "Please run: git submodule update --init"
+    exit 1
+}
+
+#### Source the base PDK xschemrc configuration
+source $PDK_ROOT/$PDK/libs.tech/xschem/xschemrc
+
+#### Add project-specific xschem directories
+append XSCHEM_LIBRARY_PATH :$SCRIPT_DIR/xschem
+
+#### Add IO library path explicitly
+append XSCHEM_LIBRARY_PATH :$PDK_ROOT/$PDK/libs.ref/sg13g2_io/xschem
+
+#### Add other library paths from PDK
+append XSCHEM_LIBRARY_PATH :$PDK_ROOT/$PDK/libs.ref/sg13g2_pr/xschem
+append XSCHEM_LIBRARY_PATH :$PDK_ROOT/$PDK/libs.ref/sg13g2_stdcell/xschem
+append XSCHEM_LIBRARY_PATH :$PDK_ROOT/$PDK/libs.tech/xschem/sg13g2_pr
+
+###########################################################################
+#### NETLIST DIRECTORY
+###########################################################################
+#### Set netlist directory relative to project
+set netlist_dir $SCRIPT_DIR/netlist
