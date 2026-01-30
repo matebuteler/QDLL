@@ -20,8 +20,8 @@ N 490 0 560 0 {lab=OUT2}
 N 150 160 170 160 {lab=CP}
 N 170 -80 170 160 {lab=CP}
 N 150 -80 170 -80 {lab=CP}
-C {/foss/designs/DLL/2026/Cells/TOP.sym} 0 -110 0 0 {name=x1}
-C {/foss/designs/DLL/2026/Cells/TOP.sym} 0 130 0 0 {name=x2}
+C {Cells/TOP.sym} 0 -110 0 0 {name=x1}
+C {Cells/TOP.sym} 0 130 0 0 {name=x2}
 C {iopin.sym} -290 -250 2 0 {name=p1 lab=VDD
 }
 C {iopin.sym} -290 -220 2 0 {name=p2 lab=VSS}
@@ -31,7 +31,7 @@ C {lab_wire.sym} 0 -20 0 0 {name=p5 sig_type=std_logic lab=VSS}
 C {lab_wire.sym} 0 230 0 0 {name=p6 sig_type=std_logic lab=VSS}
 C {ipin.sym} -200 -110 0 0 {name=p7 lab=IN1}
 C {ipin.sym} -200 130 0 0 {name=p8 lab=IN2}
-C {/foss/designs/DLL/2026/Cells/LATCH.sym} 400 0 0 0 {name=x3}
+C {Cells/LATCH.sym} 400 0 0 0 {name=x3}
 C {lab_wire.sym} 400 -110 1 0 {name=p9 sig_type=std_logic lab=VDD}
 C {lab_wire.sym} 400 110 1 0 {name=p10 sig_type=std_logic lab=VSS}
 C {opin.sym} 180 -110 0 0 {name=p11 lab=OUT1}

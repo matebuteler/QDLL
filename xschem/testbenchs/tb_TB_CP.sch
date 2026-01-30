@@ -58,8 +58,8 @@ C {lab_pin.sym} -490 180 2 0 {name=p8 sig_type=std_logic lab=PDIN1
 }
 C {lab_pin.sym} -390 180 2 0 {name=p9 sig_type=std_logic lab=PDIN2
 }
-C {/foss/designs/DLL/2026/Cells/PD.sym} 0 0 0 0 {name=x1}
-C {/foss/designs/DLL/2026/Cells/CP.sym} 280 0 0 0 {name=x2}
+C {Cells/PD.sym} 0 0 0 0 {name=x1}
+C {Cells/CP.sym} 280 0 0 0 {name=x2}
 C {lab_pin.sym} 140 150 2 0 {name=p3 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 0 -120 2 0 {name=p4 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} -160 20 0 0 {name=p6 sig_type=std_logic lab=PDIN2

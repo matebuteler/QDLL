@@ -39,9 +39,9 @@ spice_ignore=true}
 C {iopin.sym} 0 170 1 0 {name=p3 lab=VSS}
 C {ipin.sym} -580 0 0 0 {name=p1 lab=CPIN}
 C {opin.sym} 310 0 0 0 {name=p5 lab=CPOUT}
-C {/foss/designs/DLL/2026/Cells/RES.sym} -360 0 0 0 {name=x1
+C {Cells/RES.sym} -360 0 0 0 {name=x1
 }
-C {/foss/designs/DLL/2026/Cells/RES.sym} -130 0 0 0 {name=x2
+C {Cells/RES.sym} -130 0 0 0 {name=x2
 }
 C {sg13g2_pr/cap_cmim.sym} 100 70 0 0 {name=C2
 model=cap_cmim

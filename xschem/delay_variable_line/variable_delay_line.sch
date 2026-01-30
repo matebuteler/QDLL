@@ -32,6 +32,6 @@ C {devices/iopin.sym} 105 -380 2 0 {name=p17 sig_type=std_logic lab=VDD}
 C {devices/ipin.sym} 92.5 -230 0 0 {name=p4 lab=VIN}
 C {devices/opin.sym} 715.625 -230 0 0 {name=p5 lab=VOUT}
 C {devices/lab_pin.sym} 344.375 -258.75 1 0 {name=p1 sig_type=std_logic lab=va}
-C {/foss/designs/UNIC-CASS-Aug25/sch/delay_variable/delay_variable.sym} 280 -230 0 0 {name=x1}
-C {/foss/designs/UNIC-CASS-Aug25/sch/large_delay_vto1p1/large_delay_vto1p1.sym} 480 -230 0 0 {name=x2}
+C {delay_variable/delay_variable.sym} 280 -230 0 0 {name=x1}
+C {large_delay_vto1p1/large_delay_vto1p1.sym} 480 -230 0 0 {name=x2}
 C {ipin.sym} 100 -90 0 0 {name=p2 lab=VCONT}

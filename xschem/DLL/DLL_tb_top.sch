@@ -88,7 +88,7 @@ C {devices/gnd.sym} -2005 -1087.5 0 0 {name=l34 lab=GND}
 C {devices/lab_pin.sym} -2005 -1247.5 0 0 {name=p26 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} -1472.5 -1067.5 1 0 {name=p5 sig_type=std_logic lab=vup}
 C {devices/lab_pin.sym} -1512.5 -993.75 3 0 {name=p9 sig_type=std_logic lab=vdn}
-C {/foss/designs/UNIC-CASS-Aug25/sch/phase_detector/phase_detector.sym} -1610 -1050 0 0 {name=x7}
+C {phase_detector/phase_detector.sym} -1610 -1050 0 0 {name=x7}
 C {lab_pin.sym} -1580 -1180 3 0 {name=p11 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} -1250 -1130 3 0 {name=p13 sig_type=std_logic lab=VSS}
 C {devices/code_shown.sym} -930 -1480 0 0 {name=MODEL2 only_toplevel=true
@@ -109,10 +109,10 @@ value="
 C {lab_pin.sym} -1710 -1090 1 0 {name=p14 sig_type=std_logic lab=vin1}
 C {lab_pin.sym} -1710 -1000 3 0 {name=p15 sig_type=std_logic lab=vin2
 }
-C {/foss/designs/UNIC-CASS-Aug25/sch/delay_variable_line/variable_delay_line.sym} -1490 -1250 0 0 {name=x2}
+C {delay_variable_line/variable_delay_line.sym} -1490 -1250 0 0 {name=x2}
 C {devices/vsource.sym} -2090 -1180 0 0 {name=Vdd1 value=1.2}
 C {devices/gnd.sym} -2090 -1090 0 0 {name=Vdd2 lab=GND
 value=1.2}
 C {devices/lab_pin.sym} -2090 -1220 1 0 {name=Vdd3 sig_type=std_logic lab=VDD
 value=1.2}
-C {/foss/designs/UNIC-CASS-Aug25/sch/charge_pump/charge_pump.sym} -1330 -1050 0 0 {name=x1}
+C {charge_pump/charge_pump.sym} -1330 -1050 0 0 {name=x1}

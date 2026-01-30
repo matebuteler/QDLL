@@ -52,7 +52,7 @@ plot v(vin1) v(vout)
 *print cap_val
 .endc
 "}
-C {/foss/designs/UNIC-CASS-Aug25/sch/delay_variable_line/variable_delay_line.sym} 1522.5 -293.75 0 0 {name=x1}
+C {delay_variable_line/variable_delay_line.sym} 1522.5 -293.75 0 0 {name=x1}
 C {lab_pin.sym} 1782.5 -315 1 0 {name=p1 sig_type=std_logic lab=vout}
 C {capa.sym} 1782.5 -235 0 0 {name=C1
 m=1

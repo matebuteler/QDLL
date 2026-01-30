@@ -103,10 +103,10 @@ C {devices/gnd.sym} 135 -717.5 0 0 {name=l34 lab=GND}
 C {devices/lab_pin.sym} 135 -877.5 0 0 {name=p26 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 472.5 -817.5 0 0 {name=p7 sig_type=std_logic lab=vup}
 C {devices/lab_pin.sym} 546.25 -777.5 2 0 {name=p8 sig_type=std_logic lab=vdn}
-C {/foss/designs/UNIC-CASS-Aug25/sch/large_delay_vto1p1/large_delay_vto1p1.sym} 750 -1130 0 0 {name=x4}
-C {/foss/designs/UNIC-CASS-Aug25/sch/delay_variable/delay_variable.sym} 470 -1130 0 0 {name=x1}
-C {/foss/designs/UNIC-CASS-Aug25/sch/push_pull/push_pull.sym} 490 -960 3 0 {name=x3}
-C {/foss/designs/UNIC-CASS-Aug25/sch/phase_detector/phase_detector.sym} 490 -680 3 0 {name=x2}
+C {large_delay_vto1p1/large_delay_vto1p1.sym} 750 -1130 0 0 {name=x4}
+C {delay_variable/delay_variable.sym} 470 -1130 0 0 {name=x1}
+C {push_pull/push_pull.sym} 490 -960 3 0 {name=x3}
+C {phase_detector/phase_detector.sym} 490 -680 3 0 {name=x2}
 C {lab_pin.sym} 450 -1060 3 0 {name=p1 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 810 -1070 3 0 {name=p2 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 1030 -1010 3 0 {name=p3 sig_type=std_logic lab=VSS}

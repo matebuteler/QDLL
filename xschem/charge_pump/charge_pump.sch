@@ -251,8 +251,8 @@ device="ceramic capacitor"
 C {lab_pin.sym} 1316.25 -495 3 0 {name=p24 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 330 -415 1 0 {name=p1 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 872.5 -395 1 0 {name=p2 sig_type=std_logic lab=VDD}
-C {/foss/designs/UNIC-CASS-Aug25/sch/inv_1_manual/inv_1_manual.sym} 670 -360 0 0 {name=x1}
-C {/foss/designs/UNIC-CASS-Aug25/sch/inv_1_manual/inv_1_manual.sym} 670 -190 0 0 {name=x2}
+C {inv_1_manual/inv_1_manual.sym} 670 -360 0 0 {name=x1}
+C {inv_1_manual/inv_1_manual.sym} 670 -190 0 0 {name=x2}
 C {ipin.sym} 620 -70 0 0 {name=p3 lab=UP_IN}
 C {ipin.sym} 620 -240 0 0 {name=p11 lab=DN_IN}
 C {lab_pin.sym} 740 -240 2 0 {name=p10 sig_type=std_logic lab=DNB}

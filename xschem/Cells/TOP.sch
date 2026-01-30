@@ -34,13 +34,13 @@ N 230 600 940 600 {lab=VOUT}
 N 230 440 230 600 {lab=VOUT}
 N 70 400 310 400 {lab=VIN}
 N 70 0 310 0 {lab=VIN}
-C {/foss/designs/DLL/2026/Cells/DLine.sym} 720 0 0 0 {name=x1}
+C {Cells/DLine.sym} 720 0 0 0 {name=x1}
 C {lab_pin.sym} 720 100 2 0 {name=p1 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 720 -100 2 0 {name=p2 sig_type=std_logic lab=VDD}
-C {/foss/designs/DLL/2026/Cells/VCDL.sym} 420 0 0 0 {name=x2}
-C {/foss/designs/DLL/2026/Cells/PD.sym} 410 420 0 0 {name=x3
+C {Cells/VCDL.sym} 420 0 0 0 {name=x2}
+C {Cells/PD.sym} 410 420 0 0 {name=x3
 }
-C {/foss/designs/DLL/2026/Cells/CP.sym} 660 420 0 0 {name=x4
+C {Cells/CP.sym} 660 420 0 0 {name=x4
 }
 C {lab_pin.sym} 420 -100 2 0 {name=p3 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 460 100 2 0 {name=p5 sig_type=std_logic lab=VSS}

@@ -252,9 +252,9 @@ spice_ignore=true}
 C {lab_pin.sym} 1116.25 -375 3 0 {name=p24 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 130 -295 1 0 {name=p1 sig_type=std_logic lab=VDD}
 C {lab_pin.sym} 672.5 -275 1 0 {name=p2 sig_type=std_logic lab=VDD}
-C {/foss/designs/UNIC-CASS-Aug25/sch/inv_1_manual/inv_1_manual.sym} 470 -240 0 0 {name=x1
+C {inv_1_manual/inv_1_manual.sym} 470 -240 0 0 {name=x1
 }
-C {/foss/designs/UNIC-CASS-Aug25/sch/inv_1_manual/inv_1_manual.sym} 470 -70 0 0 {name=x2
+C {inv_1_manual/inv_1_manual.sym} 470 -70 0 0 {name=x2
 }
 C {ipin.sym} 420 50 0 0 {name=p3 lab=UP_IN}
 C {ipin.sym} 420 -120 0 0 {name=p11 lab=DN_IN}

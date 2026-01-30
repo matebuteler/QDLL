@@ -176,6 +176,6 @@ value="
 .endc
 "
 spice_ignore=true}
-C {/foss/designs/DLL/2026/Cells/DLine.sym} -80 0 0 0 {name=x1}
+C {Cells/DLine.sym} -80 0 0 0 {name=x1}
 C {lab_pin.sym} -80 100 2 0 {name=p1 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} -80 -100 2 0 {name=p2 sig_type=std_logic lab=VDD}

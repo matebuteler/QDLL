@@ -161,8 +161,8 @@ C {devices/gnd.sym} 2170 -760 0 0 {name=l6 lab=GND}
 C {devices/lab_pin.sym} 1942.5 -865 1 0 {name=p5 sig_type=std_logic lab=va}
 C {devices/vsource.sym} 1970 -630 0 0 {name=Vdd4 value=0
 }
-C {/foss/designs/UNIC-CASS-Aug25/sch/large_delay_vto1p1/large_delay_vto1p1.sym} 2110 -800 0 0 {name=x2}
-C {/foss/designs/UNIC-CASS-Aug25/sch/delay_variable/delay_variable.sym} 1830 -800 0 0 {name=x1}
+C {large_delay_vto1p1/large_delay_vto1p1.sym} 2110 -800 0 0 {name=x2}
+C {delay_variable/delay_variable.sym} 1830 -800 0 0 {name=x1}
 C {devices/code_shown.sym} 1420 -410 0 0 {name=MODEL1 only_toplevel=true
 format="tcleval( @value )"
 value="

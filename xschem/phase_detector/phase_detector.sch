@@ -260,11 +260,11 @@ C {devices/lab_pin.sym} 612.5 -175 1 0 {name=p22 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} 860 -80 1 0 {name=p21 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} 990 -80 1 0 {name=p23 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} 1250 -210 1 0 {name=p28 sig_type=std_logic lab=VDD}
-C {/foss/designs/UNIC-CASS-Aug25/sch/inv_1_manual/inv_1_manual.sym} 860 -130 0 0 {name=x1
+C {inv_1_manual/inv_1_manual.sym} 860 -130 0 0 {name=x1
 spice_ignore=true}
-C {/foss/designs/UNIC-CASS-Aug25/sch/inv_1_manual/inv_1_manual.sym} 990 -130 0 0 {name=x2
+C {inv_1_manual/inv_1_manual.sym} 990 -130 0 0 {name=x2
 spice_ignore=true}
-C {/foss/designs/UNIC-CASS-Aug25/sch/inv_1_manual/inv_1_manual.sym} 1440 -200 0 0 {name=x3
+C {inv_1_manual/inv_1_manual.sym} 1440 -200 0 0 {name=x3
 spice_ignore=true}
 C {opin.sym} 1505 460 0 0 {name=p1 lab=DN}
 C {sg13g2_pr/sg13_lv_pmos.sym} 460 440 0 0 {name=M19
@@ -347,11 +347,11 @@ C {devices/lab_pin.sym} 552.5 365 1 0 {name=p36 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} 800 460 1 0 {name=p37 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} 930 460 1 0 {name=p38 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} 1190 330 1 0 {name=p39 sig_type=std_logic lab=VDD}
-C {/foss/designs/UNIC-CASS-Aug25/sch/inv_1_manual/inv_1_manual.sym} 850 270 0 0 {name=x4
+C {inv_1_manual/inv_1_manual.sym} 850 270 0 0 {name=x4
 spice_ignore=true}
-C {/foss/designs/UNIC-CASS-Aug25/sch/inv_1_manual/inv_1_manual.sym} 930 410 0 0 {name=x5
+C {inv_1_manual/inv_1_manual.sym} 930 410 0 0 {name=x5
 spice_ignore=true}
-C {/foss/designs/UNIC-CASS-Aug25/sch/inv_1_manual/inv_1_manual.sym} 1380 340 0 0 {name=x6
+C {inv_1_manual/inv_1_manual.sym} 1380 340 0 0 {name=x6
 spice_ignore=true}
 C {lab_pin.sym} 390 470 0 0 {name=p2 sig_type=std_logic lab=CK_IN}
 C {lab_pin.sym} 390 580 0 0 {name=p4 sig_type=std_logic lab=CK_REF}

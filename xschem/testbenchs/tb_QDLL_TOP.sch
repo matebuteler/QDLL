@@ -354,7 +354,7 @@ C {lab_pin.sym} 540 190 2 0 {name=p15 sig_type=std_logic lab=outpad2}
 C {sg13g2_IOPadAnalog.sym} 390 110 2 1 {name=x18
 }
 C {lab_pin.sym} -590 170 2 0 {name=p18 sig_type=std_logic lab=inpad2}
-C {/foss/designs/DLL/2026/Cells/QDLL_TOP.sym} -10 0 0 0 {name=x12}
+C {Cells/QDLL_TOP.sym} -10 0 0 0 {name=x12}
 C {lab_pin.sym} -180 -130 2 0 {name=p16 sig_type=std_logic lab=in1}
 C {lab_pin.sym} -180 110 2 0 {name=p17 sig_type=std_logic lab=in2}
 C {lab_pin.sym} 160 110 0 0 {name=p19 sig_type=std_logic lab=out2}

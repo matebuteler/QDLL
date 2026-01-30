@@ -110,7 +110,7 @@ device="ceramic capacitor"
 C {devices/gnd.sym} 1312.5 232.5 0 0 {name=l8 lab=GND}
 C {devices/gnd.sym} 1057.5 340 0 0 {name=l6 lab=GND}
 C {devices/vsource.sym} 1057.5 290 0 0 {name=VCONT value="dc \{VCONT\}"}
-C {/foss/designs/UNIC-CASS-Aug25/sch/delay_variable/delay_variable.sym} 1040 120 0 0 {name=x1}
+C {delay_variable/delay_variable.sym} 1040 120 0 0 {name=x1}
 C {devices/code_shown.sym} 800 450 0 0 {name=MODEL1 only_toplevel=true
 format="tcleval( @value )"
 value="

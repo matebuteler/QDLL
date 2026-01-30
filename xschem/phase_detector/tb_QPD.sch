@@ -64,7 +64,7 @@ tclcommand="xschem save; xschem netlist; xschem simulate"
 }
 C {devices/vsource.sym} 1310 -250 2 0 {name=VIN1 value="PULSE(0 1.2 0 1p 1p 1n 2n)"}
 C {devices/gnd.sym} 1310 -320 2 0 {name=l5 lab=GND}
-C {/foss/designs/DLL/phase_detector.sym} 1550 -180 0 0 {name=x2
+C {phase_detector.sym} 1550 -180 0 0 {name=x2
 }
 C {devices/vsource.sym} 1310 -100 0 0 {name=VIN2 value="PULSE(0 1.2 1.0n 1p 1p 1n 2n)"}
 C {devices/gnd.sym} 1310 -40 0 0 {name=l9 lab=GND}
@@ -86,7 +86,7 @@ C {devices/lab_pin.sym} 1690 -160 3 0 {name=p8 sig_type=std_logic lab=vdn}
 C {devices/gnd.sym} 1840 -320 0 0 {name=l11 lab=GND}
 C {devices/lab_pin.sym} 1390 -190 1 0 {name=p6 sig_type=std_logic lab=vin1}
 C {devices/lab_pin.sym} 1390 -160 3 0 {name=p9 sig_type=std_logic lab=vin2}
-C {/foss/designs/DLL/push_pull.sym} 1880 -180 0 0 {name=x3
+C {push_pull.sym} 1880 -180 0 0 {name=x3
 }
 C {devices/gnd.sym} 1992.5 -67.5 0 0 {name=l1 lab=GND}
 C {devices/capa.sym} 1930 -130 0 0 {name=C1
