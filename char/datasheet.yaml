@@ -60,6 +60,8 @@ parameters:
     description: Supply current (active)
     display: Idd
     unit: mA
+    tool: ngspice
+    method: current
     spec:
       typical:
         value: any
@@ -75,6 +77,8 @@ parameters:
     description: Input frequency
     display: Fin
     unit: MHz
+    tool: ngspice
+    method: frequency
     spec:
       minimum:
         value: 50
@@ -94,6 +98,8 @@ parameters:
     description: Phase noise
     display: PN
     unit: dBc/Hz
+    tool: ngspice
+    method: noise
     spec:
       maximum:
         value: -100
@@ -109,6 +115,8 @@ parameters:
     description: RMS jitter
     display: Jitter
     unit: ps
+    tool: ngspice
+    method: jitter
     spec:
       maximum:
         value: 10
