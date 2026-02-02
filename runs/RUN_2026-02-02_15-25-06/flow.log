@@ -1,0 +1,19 @@
+Running parameters: vcdl_delay, power_consumption, phase_detector, klayout_drc
+Generating simulation netlist from schematic…
+Using run time directory XSCHEM_SHAREDIR = /foss/tools/xschem/share/xschem
+Sourcing /foss/tools/xschem/share/xschem/xschemrc init file
+Sourcing /foss/designs/DelayLine/xschem/xschemrc init file
+ERROR: IHP-Open-PDK submodule not initialized.
+Please run: git submodule update --init
+Xschem process returned error code 1
+
+No (compressed) GDS layout found.
+No layout for project QDLL found.
+No (compressed) GDS layout found.
+No layout for project QDLL found.
+Failed to regenerate project netlist, aborting.
+Parameter vcdl_delay: Canceled.
+Parameter power_consumption: Canceled.
+Parameter phase_detector: Canceled.
+Parameter klayout_drc: Canceled.
+Done with CACE simulations and evaluations in 0:00:00.

@@ -1,0 +1,12 @@
+Running parameters: vcdl_delay, power_consumption, phase_detector, klayout_drc
+Generating simulation netlist from schematic…
+No (compressed) GDS layout found.
+No layout for project QDLL found.
+No (compressed) GDS layout found.
+No layout for project QDLL found.
+Failed to regenerate project netlist, aborting.
+Parameter vcdl_delay: Canceled.
+Parameter power_consumption: Canceled.
+Parameter phase_detector: Canceled.
+Parameter klayout_drc: Canceled.
+Done with CACE simulations and evaluations in 0:00:00.

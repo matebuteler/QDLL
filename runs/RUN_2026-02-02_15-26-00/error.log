@@ -1,0 +1,12 @@
+Using run time directory XSCHEM_SHAREDIR = /foss/tools/xschem/share/xschem
+Sourcing /foss/tools/xschem/share/xschem/xschemrc init file
+Sourcing /foss/designs/DelayLine/xschem/xschemrc init file
+ERROR: IHP-Open-PDK submodule not initialized.
+Please run: git submodule update --init
+Xschem process returned error code 1
+
+No (compressed) GDS layout found.
+No layout for project QDLL found.
+No (compressed) GDS layout found.
+No layout for project QDLL found.
+Failed to regenerate project netlist, aborting.
