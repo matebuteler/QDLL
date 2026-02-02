@@ -22,6 +22,13 @@ paths:
   netlist: netlist
   documentation: doc
 
+# Layout-specific configuration
+# The layout file should match the project name (QDLL.gds)
+# and contain a single top cell
+layout:
+  gds_filename: QDLL.gds
+  cellname: TOP
+
 pins:
   VDD:
     description: Positive power supply
