@@ -1,0 +1,58 @@
+** CACE Template: VCDL Delay Measurement
+** sch_path: tb_vcdl_delay.sch
+
+.param vdd_val = CACE{vdd}
+.param temp_val = CACE{temperature}
+.param corner_val = CACE{corner}
+.param cload_val = CACE{cload}
+
+** Include PDK models
+.lib CACE{PDK_ROOT}/CACE{PDK}/libs.tech/ngspice/models/cornerMOSlv.lib mos_CACE{corner}
+.lib CACE{PDK_ROOT}/CACE{PDK}/libs.tech/ngspice/models/cornerRES.lib res_typ
+.lib CACE{PDK_ROOT}/CACE{PDK}/libs.tech/ngspice/models/cornerCAP.lib cap_typ
+
+** Include DUT
+.include "CACE{DUT_path}"
+
+** Temperature
+.temp CACE{temperature}
+
+** Power supplies
+Vdd VDD GND CACE{vdd}
+Vss VSS GND 0
+
+** Input stimulus - fast edge clock
+Vin VIN GND PULSE(0 CACE{vdd} 0 10p 10p 5n 10n)
+
+** Control voltage sweep (min to max)
+Vcont_min VCONT_MIN GND 0
+Vcont_max VCONT_MAX GND CACE{vdd}
+
+** DUT instances - one at min control, one at max
+XDUT_min VDD VIN VOUT_MIN VCONT_MIN VSS CACE{DUT_name}
+XDUT_max VDD VIN VOUT_MAX VCONT_MAX VSS CACE{DUT_name}
+
+** Load capacitors
+Cload_min VOUT_MIN GND CACE{cload}f
+Cload_max VOUT_MAX GND CACE{cload}f
+
+** Analysis
+.tran 1p 50n
+
+** Measurements
+.meas tran t_in WHEN v(VIN)=0.6 RISE=2
+.meas tran t_out_min WHEN v(VOUT_MIN)=0.6 RISE=2
+.meas tran t_out_max WHEN v(VOUT_MAX)=0.6 RISE=2
+.meas tran delay_min PARAM='(t_out_min-t_in)*1e12'
+.meas tran delay_max PARAM='(t_out_max-t_in)*1e12'
+.meas tran delay_range PARAM='delay_max-delay_min'
+
+** Output results
+.control
+run
+set filetype=ascii
+set appendwrite
+echo $&delay_min $&delay_max $&delay_range > CACE{simpath}/CACE{filename}_CACE{N}.data
+.endc
+
+.end

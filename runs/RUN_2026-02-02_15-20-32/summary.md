@@ -13,5 +13,3 @@
 | PD Gain              | ngspice              | pd_gain              |       0.1 V/rad |          ​ |          any |          ​ |          any |          ​ |   Skip 🟧    |
 | KLayout DRC          | klayout_drc          | drc_errors           |               ​ |          ​ |            ​ |          ​ |            0 |          ​ |   Skip 🟧    |
 
-
-## Plots

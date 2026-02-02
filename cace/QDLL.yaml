@@ -1,0 +1,233 @@
+#--------------------------------------------------------------
+# CACE circuit characterization file for QDLL
+# Quadrature Delay Locked Loop
+#--------------------------------------------------------------
+
+name: QDLL
+description: 100MHz Quadrature Delay Locked Loop for IHP SG13G2
+PDK: ihp-sg13g2
+
+cace_format: 5.2
+
+authorship:
+  designer: Leonardo Vazquez, Martin Doric, Clemente Molinari, Santiago Basignana, Matias Schulthess, Mateo Buteler
+  company: Fundacion Fulgor
+  creation_date: January 2026
+  license: Apache 2.0
+
+paths:
+  root: ..
+  schematic: xschem
+  layout: gds
+  netlist: netlist
+  documentation: doc
+
+pins:
+  VDD:
+    description: Positive power supply
+    direction: inout
+    type: power
+    Vmin: 1.08
+    Vmax: 1.32
+  VSS:
+    description: Ground supply
+    direction: inout
+    type: ground
+  IN1:
+    description: Reference clock input 1
+    direction: input
+    type: signal
+  IN2:
+    description: Reference clock input 2 (quadrature)
+    direction: input
+    type: signal
+  OUT1:
+    description: Delayed clock output 1
+    direction: output
+    type: signal
+  OUT2:
+    description: Delayed clock output 2 (quadrature)
+    direction: output
+    type: signal
+  CP:
+    description: Charge pump / control voltage node
+    direction: inout
+    type: signal
+
+default_conditions:
+  vdd:
+    description: Power supply voltage
+    display: Vdd
+    unit: V
+    typical: 1.2
+  temperature:
+    description: Ambient temperature
+    display: Temp
+    unit: °C
+    typical: 27
+  corner:
+    description: Process corner
+    display: Corner
+    typical: tt
+  fin:
+    description: Input frequency
+    display: Fin
+    unit: MHz
+    typical: 100
+  cload:
+    description: Output load capacitance
+    display: CLoad
+    unit: fF
+    typical: 100
+
+parameters:
+  # ============================================================
+  # VCDL Characterization
+  # ============================================================
+  vcdl_delay:
+    description: VCDL delay range measurement
+    display: VCDL Delay
+    spec:
+      delay_min:
+        display: Minimum Delay
+        description: Minimum propagation delay through VCDL
+        unit: ps
+        minimum:
+          value: any
+        typical:
+          value: any
+        maximum:
+          value: 500
+      delay_max:
+        display: Maximum Delay
+        description: Maximum propagation delay through VCDL
+        unit: ps
+        minimum:
+          value: 2000
+        typical:
+          value: any
+        maximum:
+          value: any
+      delay_range:
+        display: Delay Range
+        description: Tuning range of the VCDL
+        unit: ps
+        minimum:
+          value: 1500
+        typical:
+          value: any
+        maximum:
+          value: any
+    tool:
+      ngspice:
+        template: tb_vcdl_delay.sch
+        format: ascii
+        suffix: .data
+        variables: [delay_min, delay_max, delay_range]
+    conditions:
+      corner:
+        enumerate: [tt, ff, ss]
+      temperature:
+        minimum: -40
+        typical: 27
+        maximum: 85
+      vdd:
+        minimum: 1.08
+        typical: 1.2
+        maximum: 1.32
+
+  # ============================================================
+  # Power Consumption
+  # ============================================================
+  power_consumption:
+    description: Static and dynamic power consumption
+    display: Power
+    spec:
+      idd_static:
+        display: Static Current
+        description: Quiescent supply current
+        unit: uA
+        minimum:
+          value: any
+        typical:
+          value: any
+        maximum:
+          value: 500
+      idd_dynamic:
+        display: Dynamic Current
+        description: Supply current at operating frequency
+        unit: mA
+        minimum:
+          value: any
+        typical:
+          value: any
+        maximum:
+          value: 5
+    tool:
+      ngspice:
+        template: tb_power.sch
+        format: ascii
+        suffix: .data
+        variables: [idd_static, idd_dynamic]
+    conditions:
+      corner:
+        enumerate: [tt, ff, ss]
+      temperature:
+        enumerate: [-40, 27, 85]
+      vdd:
+        typical: 1.2
+
+  # ============================================================
+  # Phase Detector Characterization
+  # ============================================================
+  phase_detector:
+    description: Phase detector gain and linearity
+    display: Phase Detector
+    spec:
+      pd_gain:
+        display: PD Gain
+        description: Phase detector gain
+        unit: V/rad
+        minimum:
+          value: 0.1
+        typical:
+          value: any
+        maximum:
+          value: any
+    tool:
+      ngspice:
+        template: tb_pd.sch
+        format: ascii
+        suffix: .data
+        variables: [pd_gain]
+    conditions:
+      corner:
+        enumerate: [tt, ff, ss]
+      temperature:
+        typical: 27
+
+  # ============================================================
+  # Layout Verification
+  # ============================================================
+  klayout_drc:
+    description: KLayout DRC
+    display: KLayout DRC
+    spec:
+      drc_errors:
+        maximum:
+          value: 0
+    tool:
+      klayout_drc:
+        args: ['-rd', 'feol=true', '-rd', 'beol=true', '-rd', 'offgrid=true']
+
+# Note: LVS requires proper netlist extraction setup
+# Uncomment when layout extraction is configured
+#  netgen_lvs:
+#    description: Netgen LVS
+#    display: Netgen LVS
+#    spec:
+#      lvs_errors:
+#        maximum:
+#          value: 0
+#    tool:
+#      netgen_lvs

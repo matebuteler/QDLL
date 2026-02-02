@@ -1,52 +1,75 @@
 # QDLL
 
-- Description: 100MHz Quadrature Delay Locked Loop
+- Description: 100MHz Quadrature Delay Locked Loop for IHP SG13G2
 - PDK: ihp-sg13g2
 
 ## Authorship
 
 - Designer: Leonardo Vazquez, Martin Doric, Clemente Molinari, Santiago Basignana, Matias Schulthess, Mateo Buteler
 - Company: Fundacion Fulgor
-- Created: 2026
+- Created: January 2026
 - License: Apache 2.0
 - Last modified: None
 
 ## Pins
 
 - VDD
-  + Description: Power supply
+  + Description: Positive power supply
   + Direction: inout
   + Type: power
-  + Vmin: 1.7
-  + Vmax: 1.9
+  + Vmin: 1.08
+  + Vmax: 1.32
 - VSS
   + Description: Ground supply
   + Direction: inout
   + Type: ground
-  + Vmin: 0
-  + Vmax: 0
+- IN1
+  + Description: Reference clock input 1
+  + Direction: input
+  + Type: signal
+- IN2
+  + Description: Reference clock input 2 (quadrature)
+  + Direction: input
+  + Type: signal
+- OUT1
+  + Description: Delayed clock output 1
+  + Direction: output
+  + Type: signal
+- OUT2
+  + Description: Delayed clock output 2 (quadrature)
+  + Direction: output
+  + Type: signal
+- CP
+  + Description: Charge pump / control voltage node
+  + Direction: inout
+  + Type: signal
 
 ## Default Conditions
 
-- Vvdd
-  + Description: Supply voltage
+- vdd
+  + Description: Power supply voltage
   + Display: Vdd
   + Unit: V
-  + Typical: 1.8
-- Vvss
-  + Description: Ground voltage
-  + Display: Vss
-  + Unit: V
-  + Typical: 0
+  + Typical: 1.2
 - temperature
   + Description: Ambient temperature
   + Display: Temp
-  + Unit: degC
+  + Unit: °C
   + Typical: 27
 - corner
   + Description: Process corner
   + Display: Corner
   + Typical: tt
+- fin
+  + Description: Input frequency
+  + Display: Fin
+  + Unit: MHz
+  + Typical: 100
+- cload
+  + Description: Output load capacitance
+  + Display: CLoad
+  + Unit: fF
+  + Typical: 100
 
 ## Symbol
 

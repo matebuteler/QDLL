@@ -1,0 +1,19 @@
+Running parameters: Idd_active, input_frequency, phase_noise, jitter
+Expected template in ngspice
+Expected template in ngspice
+Expected template in ngspice
+Expected template in ngspice
+No netlist or schematic for project QDLL.
+(schematic master file xschem/QDLL.sch not found.)
+
+No structural verilog netlist, either.
+No (compressed) GDS layout found.
+No layout for project QDLL found.
+No (compressed) GDS layout found.
+No layout for project QDLL found.
+Failed to regenerate project netlist, aborting.
+Parameter Idd_active: Canceled.
+Parameter input_frequency: Canceled.
+Parameter phase_noise: Canceled.
+Parameter jitter: Canceled.
+Done with CACE simulations and evaluations in 0:00:00.
