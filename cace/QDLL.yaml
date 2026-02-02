@@ -24,10 +24,10 @@ paths:
 
 # Layout-specific configuration
 # The layout file should match the project name (QDLL.gds)
-# and contain a single top cell
+# TOP_v2.gds contains multiple cells; specify the top cell explicitly
 layout:
   gds_filename: QDLL.gds
-  cellname: TOP
+  cellname: TOP_v2
 
 pins:
   VDD:
