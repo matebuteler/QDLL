@@ -40,9 +40,9 @@ Cload_max VOUT_MAX GND CACE{cload}f
 .tran 1p 50n
 
 ** Measurements
-.meas tran t_in WHEN v(VIN)=0.6 RISE=2
-.meas tran t_out_min WHEN v(VOUT_MIN)=0.6 RISE=2
-.meas tran t_out_max WHEN v(VOUT_MAX)=0.6 RISE=2
+.meas tran t_in WHEN v(VIN)=vdd_val/2 RISE=2
+.meas tran t_out_min WHEN v(VOUT_MIN)=vdd_val/2 RISE=2
+.meas tran t_out_max WHEN v(VOUT_MAX)=vdd_val/2 RISE=2
 .meas tran delay_min PARAM='(t_out_min-t_in)*1e12'
 .meas tran delay_max PARAM='(t_out_max-t_in)*1e12'
 .meas tran delay_range PARAM='delay_max-delay_min'
