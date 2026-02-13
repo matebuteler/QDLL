@@ -227,8 +227,7 @@ value="
 .lib cornerCAP.lib cap_typ
 .include diodes.lib
 .include sg13g2_bondpad.lib
-.include /foss/pdks/ihp-sg13g2/libs.ref/sg13g2_stdcell/spice/sg13g2_stdcell.spice
-"}
+.include $env(PDK_ROOT)/$env(PDK)/libs.ref/sg13g2_stdcell/spice/sg13g2_stdcell.spice"}
 C {lab_pin.sym} 510 -80 2 0 {name=p3 sig_type=std_logic lab=IO_iovdd}
 C {lab_pin.sym} 510 -10 2 0 {name=p4 sig_type=std_logic lab=IO_iovss}
 C {lab_pin.sym} -590 -90 0 1 {name=p5 sig_type=std_logic lab=IO_vdd}

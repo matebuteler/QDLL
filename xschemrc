@@ -7,9 +7,13 @@
 #### Get the project root directory
 set SCRIPT_DIR [file dirname [file normalize [info script]]]
 
-#### Set PDK paths
-set PDK_ROOT $SCRIPT_DIR/IHP-Open-PDK
-set PDK ihp-sg13g2
+#### Set PDK paths as ENVIRONMENT VARIABLES so the sourced script sees them
+set env(PDK_ROOT) $SCRIPT_DIR/IHP-Open-PDK
+set env(PDK) ihp-sg13g2
+
+#### Keep local Tcl vars for our own use below (optional but convenient)
+set PDK_ROOT $env(PDK_ROOT)
+set PDK $env(PDK)
 
 #### Check if submodule is initialized
 if {![file exists $PDK_ROOT/$PDK/libs.tech/xschem/xschemrc]} {
@@ -24,12 +28,15 @@ source $PDK_ROOT/$PDK/libs.tech/xschem/xschemrc
 #### Add project-specific xschem directories
 append XSCHEM_LIBRARY_PATH :$SCRIPT_DIR/xschem
 
-#### Add IO library path explicitly
-append XSCHEM_LIBRARY_PATH :$PDK_ROOT/$PDK/libs.ref/sg13g2_io/xschem
+#### NOTE: sg13g2_io is already appended by the PDK's xschemrc, 
+#### so we don't need to add it again.
 
-#### Add other library paths from PDK
+#### Add other library paths that might not be in the default PDK setup
+#### (Double check if these are needed; stdcell and pr are usually handled 
+#### by the PDK script, but appending them here explicitly is safe).
 append XSCHEM_LIBRARY_PATH :$PDK_ROOT/$PDK/libs.ref/sg13g2_pr/xschem
 append XSCHEM_LIBRARY_PATH :$PDK_ROOT/$PDK/libs.ref/sg13g2_stdcell/xschem
+# The line below is often redundant if the PDK is set up correctly, but harmless
 append XSCHEM_LIBRARY_PATH :$PDK_ROOT/$PDK/libs.tech/xschem/sg13g2_pr
 
 ###########################################################################

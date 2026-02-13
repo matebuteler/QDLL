@@ -22,6 +22,9 @@ paths:
   netlist: netlist
   documentation: doc
 
+layout:
+  gds_filename: QDLL.gds
+
 pins:
   VDD:
     description: Positive power supply
