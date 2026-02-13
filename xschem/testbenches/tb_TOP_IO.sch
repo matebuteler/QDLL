@@ -271,10 +271,6 @@ C {lab_pin.sym} 540 -120 2 0 {name=p3 sig_type=std_logic lab=IO_iovdd}
 C {lab_pin.sym} 540 -50 2 0 {name=p4 sig_type=std_logic lab=IO_iovss}
 C {lab_pin.sym} -560 -130 0 1 {name=p5 sig_type=std_logic lab=IO_vdd}
 C {lab_pin.sym} -560 -40 2 0 {name=p6 sig_type=std_logic lab=IO_vss}
-C {sg13g2_pr/sg13g2_IOPadIOVdd.sym} 420 -90 0 0 {name=x1}
-C {sg13g2_pr/sg13g2_IOPadIOVss.sym} 420 -10 0 0 {name=x3}
-C {sg13g2_pr/sg13g2_IOPadVSS.sym} -380 -10 0 1 {name=x2}
-C {sg13g2_pr/sg13g2_IOPadVdd.sym} -380 -90 0 1 {name=x4}
 C {sg13g2_pr/bondpad.sym} 640 -10 1 0 {name=X6
 model=bondpad
 spiceprefix=X
@@ -307,7 +303,6 @@ C {devices/launcher.sym} -840 970 0 0 {name=h5
 descr="load waves Ctrl + left click" 
 tclcommand="xschem raw_read $netlist_dir/power_io.raw tran"
 }
-C {sg13g2_pr/sg13g2_IOPadAnalog.sym} -380 -170 0 1 {name=x13}
 C {sg13g2_pr/bondpad.sym} -640 -170 3 1 {name=X14
 model=bondpad
 spiceprefix=X
@@ -350,10 +345,6 @@ value="
 .endc
 "
 spice_ignore=true}
-C {sg13g2_pr/sg13g2_IOPadAnalog.sym} 420 -170 2 1 {name=x5
-}
-C {sg13g2_pr/sg13g2_IOPadAnalog.sym} -380 70 0 1 {name=x10
-}
 C {sg13g2_pr/bondpad.sym} -640 70 3 1 {name=X11
 model=bondpad
 spiceprefix=X
@@ -444,8 +435,6 @@ shape=0
 padtype=0
 }
 C {lab_pin.sym} 570 40 1 0 {name=p15 sig_type=std_logic lab=out_b}
-C {sg13g2_pr/sg13g2_IOPadAnalog.sym} 420 70 2 1 {name=x18
-}
 C {lab_pin.sym} -560 50 1 0 {name=p18 sig_type=std_logic lab=in_b}
 C {Cells/LATCH.sym} 310 -450 0 0 {name=x19}
 C {lab_pin.sym} 290 -530 1 0 {name=p19 sig_type=std_logic lab=IO_vdd}
@@ -453,3 +442,11 @@ C {lab_pin.sym} 290 -370 3 0 {name=p20 sig_type=std_logic lab=IO_vss}
 C {lab_pin.sym} 330 -530 1 0 {name=p21 sig_type=std_logic lab=vout}
 C {lab_pin.sym} 200 70 1 0 {name=p22 sig_type=std_logic lab=voutb}
 C {lab_pin.sym} 330 -370 3 0 {name=p23 sig_type=std_logic lab=voutb}
+C {sg13g2_IOPadAnalog.sym} 420 -170 0 0 {name=x5}
+C {sg13g2_IOPadAnalog.sym} 420 70 0 0 {name=x1}
+C {sg13g2_IOPadAnalog.sym} -380 70 2 0 {name=x2}
+C {sg13g2_IOPadAnalog.sym} -380 -170 2 0 {name=x3}
+C {sg13g2_IOPadIOVdd.sym} -380 -90 2 0 {name=x4}
+C {sg13g2_IOPadIOVss.sym} -380 -10 2 0 {name=x10}
+C {sg13g2_IOPadIOVss.sym} 420 -10 0 0 {name=x13}
+C {sg13g2_IOPadIOVdd.sym} 420 -90 0 0 {name=x18}
