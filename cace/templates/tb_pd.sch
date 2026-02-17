@@ -45,11 +45,9 @@ C {netlist_not_shown.sym} 20 220 0 0 {name=s2 only_toplevel=false value=".param 
 ** Analysis
 .tran 1p 20n
 
-** Measure average voltages to calculate gain
-.meas tran vup_avg AVG v(UP) FROM=10n TO=20n
-.meas tran vdn_avg AVG v(DN) FROM=10n TO=20n
-.meas tran pd_gain PARAM='(vup_avg-vdn_avg)/0.785'
-
+** Measure average voltage at PD output to calculate gain
+.meas tran vpd_avg AVG v(net1) FROM=10n TO=20n
+.meas tran pd_gain PARAM='vpd_avg/0.785'
 ** Output results
 .control
 run
