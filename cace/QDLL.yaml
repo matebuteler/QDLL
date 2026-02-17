@@ -123,7 +123,7 @@ parameters:
           value: any
     tool:
       ngspice:
-        template: tb_vcdl_delay.sch
+        template: tb_vcdl_delay.spice
         format: ascii
         suffix: .data
         variables: [delay_min, delay_max, delay_range]
