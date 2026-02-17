@@ -41,7 +41,8 @@ Cload2 OUT2 GND 100f
 .tran 10p 200n
 
 ** Measurements
-.meas tran idd_static AVG i(Vdd) FROM=0n TO=10n
+** Static current after DLL has settled; use 50-100 ns window for steady-state characterization
+.meas tran idd_static AVG i(Vdd) FROM=50n TO=100n
 .meas tran idd_dynamic AVG i(Vdd) FROM=100n TO=200n
 
 ** Output results (convert to uA and mA)
