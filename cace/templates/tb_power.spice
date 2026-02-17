@@ -26,7 +26,8 @@ Vss VSS GND 0
 Vin1 IN1 GND PULSE(0 CACE{vdd} 0 10p 10p 'period_ns/2*1n' 'period_ns*1n')
 Vin2 IN2 GND PULSE(0 CACE{vdd} 'period_ns/4*1n' 10p 10p 'period_ns/2*1n' 'period_ns*1n')
 
-** Control voltage (mid-range for typical operation)
+** Control voltage set to 0.6 V as a mid-range "typical" operating point for the DLL
+** This value was chosen based on nominal PVT characterization; sweep externally if needed
 Vcont CP GND 0.6
 
 ** DUT instance - using QDLL
